@@ -53,8 +53,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 72.182.40.80         |
-|   ELK    | Yes                 | 72.182.40.80         |
+| Jump Box | Yes                 | 72.182.40.80-Port80  |
+|   ELK    | Yes                 | 72.182.40.80-Port5601|
 |          |                     |                      |
 
 ### Elk Configuration
