@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   Playbook: Ansible/install-elk.yml
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -24,19 +24,20 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly balanced, in addition to restricting access to the network.
 - A load balancer is able to distribute all incoming network traffic across multiple servers to keep balance and order. A load balancer can even create new servers if needed to spread out network traffic more. This helps protect networks from denial of service (DOS) attacks. The main advantage of a jump box server is that, if properly configured and secured, they serve as a single access point between the user and their virtual machines and thus help prevent any potential loopholes or backdooors into these machines.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jumpbox and system network.
+- _TODO: What does Filebeat watch for? Filebeat watches for and logs events in the file system (usually for specific files such as Microsoft Azure and Apache), such as when files have been added or removed or edited in any way. It then sends this log data over to Elasticsearch and Logstash.
+- _TODO: What does Metricbeat record? Metricbeat records machine metrics and statistics such as uptime and memory usage.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web-1    |Webserver | 10.0.0.5   | Linux            |
+| Web-2    |Webserver | 10.0.0.6   | Linux            |
+| Web-3    |Webserver | 10.0.0.7   | Linux            |
+| ELK      | Data Log | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
