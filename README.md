@@ -22,11 +22,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly balanced, in addition to restricting access to the network.
-- A load balancer is able to distribute all incoming network traffic across multiple servers to keep balance and order. A load balancer can even create new servers if needed to spread out network traffic more. This helps protect networks from denial of service (DOS) attacks. The main advantage of a jump box server is that, if properly configured and secured, they serve as a single access point between the user and their virtual machines and thus help prevent any potential loopholes or backdooors into these machines.
+- A load balancer is able to evenly distribute all incoming network traffic across multiple servers to keep balance and order and help prevent downtime. A load balancer can even create new servers if needed to spread out network traffic more. This helps protect networks from denial of service (DOS) attacks. The main advantage of a jump box server is that, if properly configured and secured, they serve as a single access point between the user and their virtual machines and thus help prevent any potential loopholes or backdooors into these machines.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jumpbox and system network.
-- _TODO: What does Filebeat watch for? Filebeat watches for and logs events in the file system (usually for specific files such as Microsoft Azure and Apache), such as when files have been added or removed or edited in any way. It then sends this log data over to Elasticsearch and Logstash.
-- _TODO: What does Metricbeat record? Metricbeat records machine metrics and statistics such as uptime and memory usage.
+-Filebeat watches for and logs events in the file system (usually for specific files such as Microsoft Azure and Apache), such as when files have been added or removed or edited in any way. It then sends this log data over to Elasticsearch and Logstash.
+-Metricbeat records machine metrics and statistics such as uptime and memory usage.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -60,7 +60,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- Automatically configuring our ELK machine using Ansible is much more efficient that manually configuring it as it is much less time-consuming and using an already verified and functional configuration helps ensure our new machine will also work and function as needed.
+- Automatically configuring our ELK machine using Ansible is a lot more efficient than manually configuring it as it is much less time-consuming and using an already verified and functional configuration helps ensure our new machine will also work and function as needed.
 
 The playbook implements the following tasks:
 - Configure ELK VM with Docker
@@ -97,10 +97,3 @@ SSH into the control node and follow the steps below:
 - Copy the playbook file (EX: install-elk.yml) to the /etc/ansible directory.
 - Update the hosts file (command: nano /etc/ansible/hosts to add a specified group to run the playbook on (EX: create ELK group to run the install-elk.yml playbook)
 - Run the playbook (command: ansible-playbook install-elk.yml), and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
