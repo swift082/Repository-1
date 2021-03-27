@@ -47,6 +47,7 @@ Only the Jumpbox machine can accept connections from the Internet. Access to thi
 -72.182.40.80
 
 Machines within the network can only be accessed by Jumpbox.
+
 -My personal workstation has access to Jumpbox via IPv4 address 72.182.40.80
 
 A summary of the access policies in place can be found in the table below.
